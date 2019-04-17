@@ -5,10 +5,6 @@ import styled from "preact-dandy";
  */
 interface GridProps {
   /**
-   * Optional additional classes passed to the component.
-   */
-  class?: string;
-  /**
    * Specify grid gap (default 16px)
    */
   gap?: string;
@@ -17,6 +13,11 @@ interface GridProps {
    */
   flow?: string;
 }
+/**
+ * Grid element. The grid element is variable-width, which is easier to manipulate in JSX. It is 6 columns wide on
+ * smartphones, 8 on tablets and 12 on desktop. This means items with size 1,2,4,8, and 12 are privileged in this grid
+ * system.
+ */
 export const Grid = styled<GridProps>(
   "div",
   {
@@ -41,11 +42,22 @@ export const Grid = styled<GridProps>(
 );
 
 type GridItemLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+/**
+ * Props for the Item component.
+ */
 interface ItemProps {
-  class?: string;
+  /**
+   * Item level, or size on the grid. Because of the workings of the grid, sizes 1,2,4,8, and 12 are privileged.
+   */
   level?: GridItemLevel;
+  /**
+   * Offsets the item by adding an element with this size before it.
+   */
   offset?: GridItemLevel;
 }
+/**
+ * Item component, designed to go inside the Grid component defined above.
+ */
 export const Item = styled<ItemProps>(
   "div",
   {
