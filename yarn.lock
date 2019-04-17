@@ -5448,10 +5448,10 @@ posthtml@^0.11.2, posthtml@^0.11.3:
     posthtml-parser "^0.3.3"
     posthtml-render "^1.1.0"
 
-preact-dandy@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/preact-dandy/-/preact-dandy-0.1.1.tgz#ac6d4737f8476d04e1fdd6540ecbb9260bb6e5fa"
-  integrity sha512-pAv3xivv2kigUx9vXJ1dqxIyZE+XfxsB8qqS/lFpUesjDTNnAVMn0oKhQiR1m3uTT08IYsUjLkZfKSg0z88x5Q==
+preact-dandy@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/preact-dandy/-/preact-dandy-0.2.0.tgz#a89736a56f3220f4ed072cb29205e0b1d6a60cab"
+  integrity sha512-doyasNqOZ8C8YQgkRy23sC0yt5G4m1aOOlUzGv1DHDNshVG8qakRTnyGYCTZhJqmeVwA8+BsKiFh5GY1FEOvYQ==
   dependencies:
     classnames "^2.2.6"
     typestyle "^2.0.1"
