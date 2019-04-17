@@ -1,6 +1,6 @@
 {
   "name": "preact-grid-utils",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Small grid utils for Preact",
   "source": "src/index.ts",
   "main": "lib/preact-grid-utils.js",
