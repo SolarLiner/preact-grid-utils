@@ -92,3 +92,7 @@ typings/
 # Built files
 lib/
 dist/
+
+# Cache folders
+.rts2*
+.cache
