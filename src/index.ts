@@ -29,10 +29,7 @@ export const Grid = styled<GridProps>(
       "@media screen and (min-width: 480px)": {
         gridTemplateColumns: "repeat(8, 1fr)"
       },
-      "@media screen and (min-width: 720px)": {
-        gridTemplateColumns: "repeat(10, 1fr)"
-      },
-      "@media screen and (min-width: 960px)": {
+      "@media screen and (min-width: 880px)": {
         gridTemplateColumns: "repeat(12, 1fr)"
       }
     }
