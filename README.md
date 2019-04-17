@@ -33,5 +33,6 @@ This means for layout purposes that items of width **1,2,4,6,12** will be best a
 
 ```tsx
 <Item level={1} offset={0}>{...}</Item>
+```
 
 The Item component wraps a single item in the grid. You can optionally pass a size (the *level* prop) and an offset (the *offset* property), but if you don't, their default values are shown above.
