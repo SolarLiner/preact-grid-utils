@@ -2,10 +2,20 @@
   "name": "preact-grid-utils",
   "version": "0.0.1",
   "description": "Small grid utils for Preact",
-  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "main": "lib/preact-grid-utils.js",
+  "module": "lib/preact-grid-utils.mjs",
+  "unpkg": "lib/preact-grid-utils.umd.js",
+  "types": "lib/types",
   "author": "SolarLiner",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "microbundle",
+    "build:types": "tsc --emitDeclarationOnly",
+    "dev": "preact test/index.html",
+    "prepack": "yarn build && yarn build:types"
+  },
   "peerDependencies": {
     "preact": "^10.0.0-alpha.4"
   },
