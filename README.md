@@ -15,20 +15,20 @@ The Grid utils define two components, **Grid** and **Item**.
 ### Grid
 
 ```tsx
-<Grid gap="16px" flow="row">{...}</Grid>
+<Grid gap="16px" flow="row" small={6} medium={8} large={12}>{...}</Grid>
 ```
 
 The Grid component is a simple wrapper over CSS Grid, with a variable-width grid. It has two optional props, which controls gap and auto-flow. Their default values are shown above.
 
 The **variable-width** grid is similar to [Material Design Component's Layout Grid](https://www.material.io/develop/web/components/layout-grid/), it changes its number of columns depending on the width of the client device. This makes it easier to work with the grid in JSX.
 
-The grid is configured with the widths as **upper limits**:
+The grid is configured by default with the widths as **upper limits**:
 
 - **6 columns** until **480px**
 - **8 columns** until **880px**
 - **12 columns** above.
 
-This means for layout purposes that items of width **1,2,4,6,12** will be best and most stable.
+This means for layout purposes that items of width **1,2,4,6,12** will be best and most stable. You can change number of columns at each breakpoint with the **small**, **medium**, and **large** props.
 
 ### Item
 

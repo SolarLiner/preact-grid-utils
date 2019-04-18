@@ -12,6 +12,18 @@ interface GridProps {
    * Specify grid auto-flow (default row)
    */
   flow?: string;
+  /**
+   * Grid width for desktop-width
+   */
+  large?: number;
+  /**
+   * Grid width for tablet-width
+   */
+  medium?: number;
+  /**
+   * Grid width for phone-width
+   */
+  small?: number;
 }
 /**
  * Grid element. The grid element is variable-width, which is easier to manipulate in JSX. It is 6 columns wide on
@@ -37,7 +49,16 @@ export const Grid = styled<GridProps>(
   },
   props => ({
     gap: props.gap || "16px",
-    gridAutoFlow: props.gap || "row"
+    gridAutoFlow: props.gap || "row",
+    gridTemplateColumns: `repeat(${props.small || 6}, 1fr)`,
+    $nest: {
+      "@media screen and (min-width: 480px)": {
+        gridTemplateColumns: `repeat(${props.medium || 8}, 1fr)`
+      },
+      "@media screen and (min-width: 880px)": {
+        gridTemplateColumns: `repeat(${props.large || 12}, 1fr)`
+      }
+    }
   })
 );
 

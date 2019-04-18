@@ -12,7 +12,7 @@ const Block = styled("div", {
 
 export function Application() {
   return (
-    <Grid>
+    <Grid small={4}>
       {[...new Array(12)].map((_, i) => (
         <Item>
           <Block>1</Block>
