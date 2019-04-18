@@ -13,7 +13,7 @@
   "scripts": {
     "build": "microbundle",
     "build:types": "tsc --emitDeclarationOnly",
-    "dev": "preact test/index.html",
+    "dev": "parcel test/index.html",
     "prepack": "yarn build && yarn build:types"
   },
   "peerDependencies": {
